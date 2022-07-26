@@ -4,7 +4,7 @@
     border-top-left-radius: 30px; 
     border-top-right-radius: 30px;   
     background-color: #FF8E00;
-
+    margin-top: 5%;
 }
 
 .header{
@@ -14,25 +14,28 @@
 
 .center{
     display: inline-block;
+    justify-content: center;
 }
 
 ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 10px;
-    font-size: 1rem;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    padding:25px;
 }
 ul li a{
     color: black;
     letter-spacing: 0.1rem;
     text-decoration: none;
+
 }
 ul li a:hover{
     color:white
 }
 
 ul{
-    padding: 65px;
+    padding: 40px;
 }
 
 .seach{
@@ -49,14 +52,28 @@ input{
 }
 
 .logo img{
-    height: 15%;
-    width: 12%;
+    height: 10%;
+    width: 10%;
     float: left;
-    margin-top: -13%;
-    margin-left: 2%;
+    margin-top: -12%;
+    margin-left: 8%;
     border-radius: 50%;
     border: #FF8E00 solid 10px;
 }
 
+.panier img{
+    height: 10%;
+    width: 8%;
+    float: right;
+    margin-top: -11%;
+}
+
+input[type="search i"]{
+    height: 20rem
+}
+
+.recherche{
+    height: 20%;
+}
 
 

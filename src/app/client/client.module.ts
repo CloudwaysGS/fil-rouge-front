@@ -8,6 +8,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { DetailsComponent } from './pages/details/details.component';
     CardComponent,
     AsideComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    CatalogueComponent
   ],
   imports: [
     CommonModule,

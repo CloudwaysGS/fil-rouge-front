@@ -5,11 +5,14 @@
     border-top-right-radius: 30px;   
     background-color: #FF8E00;
     margin-top: 5%;
+    box-sizing: border-box;
 }
 
 .header{
     height: 55%;
     width: 100%; 
+    box-sizing: border-box;
+
 }
 
 .center{

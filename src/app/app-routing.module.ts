@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  // { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) }, 
+  { path: 'client', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) }, 
   // { path: '', redirectTo: 'blog',pathMatch:"full"}, 
   // { path: 'login', loadChildren: () => import('./securite/securite.module').then(m => m.SecuriteModule) },
   { path: "**",component: NotFoundComponent}

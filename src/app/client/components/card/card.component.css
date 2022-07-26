@@ -1,9 +1,8 @@
-body{
-    width: 100vh;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+.card-container{
+    display: flex; 
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
 }
 
 .card{
@@ -12,8 +11,15 @@ body{
     grid-template-rows: 210px 210px 210px;
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
-    box-shadow: 5px 5px rgba(0,0,0,0.9);
+    box-shadow: 5px 5px rgba(216, 195, 5, 0.9);
     text-align: center;
+    width: 50%;
+    height: 20rem;
+    box-sizing: border-box;
+    margin: 5%;
+    background-color: #FF8E00;
+     /* justify-content: center;
+    text-align: center; */
 }
 
 .card-image{
@@ -21,6 +27,7 @@ body{
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
+   margin-left: 60%;
 }
 
 .card-tex{

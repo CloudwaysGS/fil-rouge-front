@@ -1,0 +1,35 @@
+.container{
+    height: 100vh;
+    text-align: center;
+}
+
+.header{
+    height: 15%;
+    width: 100%;
+    background-color: orange;
+    border-top-left-radius: 30px; 
+    border-top-right-radius: 30px;    
+}
+
+.center{
+    display: inline-block;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+ul li a{
+    color: black;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+}
+ul li a:hover{
+    color:white
+}
+
+ul{
+    padding: 80px;
+}
+

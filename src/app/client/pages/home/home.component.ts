@@ -12,14 +12,11 @@ import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.s
 export class HomeComponent implements OnInit {
   @Input() produits:Produit[]|undefined
   catalogue:Catalogue|undefined
-    // produits$:Observable<Produit[]>|null=null
 
   constructor(private serv:CatalogueStoreService) { }
 
   ngOnInit(): void {
-    // this.produits=this.serv.all()
     this.serv.all().subscribe( (data)=> this.catalogue = data)
-
     // alert("ok")
   }
 

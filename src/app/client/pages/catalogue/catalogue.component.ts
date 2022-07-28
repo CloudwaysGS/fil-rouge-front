@@ -13,8 +13,7 @@ export class CatalogueComponent implements OnInit {
   constructor(private serv:CatalogueStoreService) { }
 
   ngOnInit(): void {
-    this.serv.all().subscribe( (data)=> this.catalogue = data)
-    console.log(this.serv.all())
+    this.serv.all().subscribe((data)=>this.catalogue = data)
   }
 
 }

@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListeComponent } from './components/liste/liste.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AsideComponent,
     HomeComponent,
     DetailsComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    ListeComponent
   ],
   imports: [
     CommonModule,

@@ -8,7 +8,7 @@
     </div> -->
    <!-- <div class="container"> -->
     <div class="card" style="width: 18rem;">
-        <img routerLink="/client/details/1" [src]="produits?.image" class="card-img-top" alt="..." height="50%">
+        <img  src="data:image/PNG;base64,{{produits?.imageBlob}}" class="card-img-top" alt="..." height="50%">
         <div class="card-body">
           <h5 class="card-title">{{produits?.prix}}</h5>
           <h5 class="card-title">{{produits?.nom}}</h5>
@@ -16,6 +16,8 @@
           <a href="#" class="btn">Ajouter au panier</a>
         </div>
       </div>
+     
+      <!-- routerLink="/client/details/1" -->
    <!-- </div> -->
     
 

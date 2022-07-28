@@ -6,16 +6,17 @@
                 <p>{{produit?.description}}</p>
             </div>    
     </div> -->
-   <div class="container">
+   <!-- <div class="container"> -->
     <div class="card" style="width: 18rem;">
-        <img routerLink="/client/details/1" src="assets/image/ffsf.png" class="card-img-top" alt="..." height="50%">
+        <img routerLink="/client/details/1" [src]="produits?.image" class="card-img-top" alt="..." height="50%">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio obcaecati, om</p>
-          <a href="#" class="btn btn-primary">Ajouter au panier</a>
+          <h5 class="card-title">{{produits?.prix}}</h5>
+          <h5 class="card-title">{{produits?.nom}}</h5>
+          <p class="card-text">{{produits?.description}}</p>
+          <a href="#" class="btn">Ajouter au panier</a>
         </div>
       </div>
-   </div>
+   <!-- </div> -->
     
 
 

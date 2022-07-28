@@ -1,10 +1,305 @@
 {
     "produit":[
         {
-            "id":"1",
-            "nom":"",
-            "prix":"",
-            "image":""
+            "burger": [
+                {
+                    "@id": "/api/burgers/1",
+                    "@type": "Burger",
+                    "id": 1,
+                    "nom": "Burger Porc Double",
+                    "prix": 2500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/2",
+                    "@type": "Burger",
+                    "id": 2,
+                    "nom": "Burger viande Double",
+                    "prix": 4000,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/3",
+                    "@type": "Burger",
+                    "id": 3,
+                    "nom": "Burger Poulet Double",
+                    "prix": 4000,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/4",
+                    "@type": "Burger",
+                    "id": 4,
+                    "nom": "Burger Simple",
+                    "prix": 1500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/5",
+                    "@type": "Burger",
+                    "id": 5,
+                    "nom": "Burger Royal",
+                    "prix": 6000,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/6",
+                    "@type": "Burger",
+                    "id": 6,
+                    "nom": "Burger frite+fromage",
+                    "prix": 2000,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/7",
+                    "@type": "Burger",
+                    "id": 7,
+                    "nom": "Burger fromage",
+                    "prix": 2000,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/8",
+                    "@type": "Burger",
+                    "id": 8,
+                    "nom": "Burger Viande Lapin",
+                    "prix": 3500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/9",
+                    "@type": "Burger",
+                    "id": 9,
+                    "nom": "Burger Viande M",
+                    "prix": 3500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/10",
+                    "@type": "Burger",
+                    "id": 10,
+                    "nom": "Burger Viande Mouton",
+                    "prix": 2500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/11",
+                    "@type": "Burger",
+                    "id": 11,
+                    "nom": "Burger Grillé Mouton",
+                    "prix": 1500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/12",
+                    "@type": "Burger",
+                    "id": 12,
+                    "nom": "BURGER CHEESE",
+                    "prix": 1500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/28",
+                    "@type": "Burger",
+                    "id": 28,
+                    "nom": "BURGER CHEESE FROMAGE",
+                    "prix": 1500,
+                    "description": "Pain grillé,  burger 130g, fromage......\n"
+                },
+                {
+                    "@id": "/api/burgers/51",
+                    "@type": "Burger",
+                    "id": 51,
+                    "nom": "BurgerRoyyy",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/burgers/54",
+                    "@type": "Burger",
+                    "id": 54,
+                    "nom": "BurgerRoyyy"
+                },
+                {
+                    "@id": "/api/burgers/57",
+                    "@type": "Burger",
+                    "id": 57,
+                    "nom": "BurgerRoyyy"
+                }
+            ]
+        },
+        {
+            "menu": [
+                {
+                    "@id": "/api/menus/29",
+                    "@type": "Menu",
+                    "id": 29,
+                    "nom": "Menuuuu",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/30",
+                    "@type": "Menu",
+                    "id": 30,
+                    "nom": "Burger",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/38",
+                    "@type": "Menu",
+                    "id": 38,
+                    "nom": "MenuBurger",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/39",
+                    "@type": "Menu",
+                    "id": 39,
+                    "nom": "qs",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/40",
+                    "@type": "Menu",
+                    "id": 40,
+                    "nom": "Menu Royal",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/41",
+                    "@type": "Menu",
+                    "id": 41,
+                    "nom": "Menu Royals",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/42",
+                    "@type": "Menu",
+                    "id": 42,
+                    "nom": "Menus Royals",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/43",
+                    "@type": "Menu",
+                    "id": 43,
+                    "nom": "Menus Royalss",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/44",
+                    "@type": "Menu",
+                    "id": 44,
+                    "nom": "Menus Royalsss",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/45",
+                    "@type": "Menu",
+                    "id": 45,
+                    "nom": "Menuss Royalsss",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/46",
+                    "@type": "Menu",
+                    "id": 46,
+                    "nom": "Menuss Royalssse",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/47",
+                    "@type": "Menu",
+                    "id": 47,
+                    "nom": "Menubbbqsss Royalssse",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/48",
+                    "@type": "Menu",
+                    "id": 48,
+                    "nom": "Menubbbqsss Roya",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/49",
+                    "@type": "Menu",
+                    "id": 49,
+                    "nom": "Menubbqsss Roya",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/52",
+                    "@type": "Menu",
+                    "id": 52,
+                    "nom": "Menubbqsss Roy",
+                    "prix": 0
+                },
+                {
+                    "@id": "/api/menus/55",
+                    "@type": "Menu",
+                    "id": 55,
+                    "nom": "dajjhdqjbhbkdqknbsqnkb"
+                },
+                {
+                    "@id": "/api/menus/58",
+                    "@type": "Menu",
+                    "id": 58,
+                    "nom": "dajjhdqjbhbkdqknbsqnkbqdqqd"
+                },
+                {
+                    "@id": "/api/menus/59",
+                    "@type": "Menu",
+                    "id": 59,
+                    "nom": "dajjhdqjbhbkdqknbsqnkbqdqqdxx"
+                },
+                {
+                    "@id": "/api/menus/60",
+                    "@type": "Menu",
+                    "id": 60,
+                    "nom": "Burgurssss"
+                },
+                {
+                    "@id": "/api/menus/61",
+                    "@type": "Menu",
+                    "id": 61,
+                    "nom": "Burgurssssss"
+                },
+                {
+                    "@id": "/api/menus/62",
+                    "@type": "Menu",
+                    "id": 62,
+                    "nom": "Burgursssssss"
+                },
+                {
+                    "@id": "/api/menus/63",
+                    "@type": "Menu",
+                    "id": 63,
+                    "nom": "Burgurssssssss",
+                    "prix": 8200
+                },
+                {
+                    "@id": "/api/menus/64",
+                    "@type": "Menu",
+                    "id": 64,
+                    "nom": "Burgurs ROI",
+                    "prix": 8200
+                },
+                {
+                    "@id": "/api/menus/65",
+                    "@type": "Menu",
+                    "id": 65,
+                    "nom": "Burgurs queen",
+                    "prix": 8200
+                },
+                {
+                    "@id": "/api/menus/66",
+                    "@type": "Menu",
+                    "id": 66,
+                    "nom": "Burgurs Abs",
+                    "prix": 8200,
+                    "description": "Menu 2 burgurs"
+                }
+            ]
         }
     ]
 }

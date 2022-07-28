@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Produit } from '../../shared/models/produit';
-import { ProduitService } from '../../shared/services/produit.service';
+import { Catalogue } from 'src/app/shared/models/catalogue';
+import { Produit } from 'src/app/shared/models/produits';
+import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.service';
 
 @Component({
   selector: 'app-home',
@@ -9,12 +10,17 @@ import { ProduitService } from '../../shared/services/produit.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  produits$:Observable<Produit[]>|null=null
+  @Input() produits:Produit[]|undefined
+  catalogue:Catalogue|undefined
+    // produits$:Observable<Produit[]>|null=null
 
-  constructor(private service:ProduitService) { }
+  constructor(private serv:CatalogueStoreService) { }
 
   ngOnInit(): void {
-    this.produits$=this.service.All()
+    // this.produits=this.serv.all()
+    this.serv.all().subscribe( (data)=> this.catalogue = data)
+
+    // alert("ok")
   }
 
 }

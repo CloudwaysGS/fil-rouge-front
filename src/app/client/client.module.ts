@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { CatalogueComponent } from './pages/catalogue/catalogue.component';
     CommonModule,
     ClientRoutingModule,
     LayoutModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ]
 })
 export class ClientModule { }

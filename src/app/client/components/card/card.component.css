@@ -1,27 +1,21 @@
-/* ._ngcontent-rdq-c23{
+
+/* .container{
     justify-content: center;
     text-align: center;
-    justify-items: center;
-} */
-.container{
-    justify-content: center;
-    /* text-align: center; */
-    /* display: flex; */
-    
+    display: flex;
     display: inline-block;
     margin: 2%;
-}
+} */
 
-.card{
-    /* display: flex; */
+ .card{
+    display: flex;
     border-radius: 18px;
-    box-shadow: 5px 5px rgba(216, 195, 5, 0.9);
-    /* width: 100%; */
-    height: 20rem;
-    background-color: #FF8E00;
-    justify-content: center;
-    text-align: center;
-    justify-items: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    
+    margin: 5%;
+} 
+.btn{
+    color: #FF8E00;
 }
 
 .card img{

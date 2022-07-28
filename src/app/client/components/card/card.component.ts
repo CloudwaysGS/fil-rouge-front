@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../../shared/models/post';
-import { Produit } from '../../shared/models/produit';
+import { Produit } from 'src/app/shared/models/produits';
+// import { Produit } from '../../shared/models/produit';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Produit } from '../../shared/models/produit';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input('coul') produit : Produit|null = null;
+  @Input() produits : Produit|null = null;
 
 constructor() { }
 

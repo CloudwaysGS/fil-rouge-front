@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Catalogue } from 'src/app/shared/models/catalogue';
+import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.service';
+// import { Catalogue } from '../../shared/models/catalogue';
 
 @Component({
   selector: 'app-catalogue',
@@ -6,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalogue.component.css']
 })
 export class CatalogueComponent implements OnInit {
-
-  constructor() { }
+  catalogue: Catalogue|undefined
+  constructor(private serv:CatalogueStoreService) { }
 
   ngOnInit(): void {
+    this.serv.all().subscribe( (data)=> this.catalogue = data)
+    console.log(this.serv.all())
   }
 
 }

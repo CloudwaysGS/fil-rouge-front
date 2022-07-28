@@ -9,10 +9,10 @@
 
  .card{
     display: flex;
-    border-radius: 18px;
+    border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-    
     margin: 5%;
+    
 } 
 .btn{
     color: #FF8E00;
@@ -23,8 +23,8 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
-    width: 100%;
-    height: 20%; */
+    width: 100%;*/
+    /* height: 20%;  */
     cursor: pointer;
 }
 

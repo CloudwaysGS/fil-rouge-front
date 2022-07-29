@@ -27,4 +27,28 @@ export class CatalogueStoreService {
       }),
     )
   }
+
+  // burgers():Observable<Catalogue> { 
+  //   return this.http.get<Catalogue>(this.abs_url).pipe(
+  //     map(data=>{
+  //       data.produits=[...data.burgers]
+  //       return data
+  //     }),
+  //   )
+  // }
+  // menus():Observable<Catalogue> { 
+  //   return this.http.get<Catalogue>(this.abs_url).pipe(
+  //     map(data=>{
+  //       data.produits=[...data.menus]
+  //       return data
+  //     }),
+  //   )
+  // }
+
+  
+
+
+
+
+  
 }

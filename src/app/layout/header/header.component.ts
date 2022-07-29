@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() clickchanged: EventEmitter<string> = new EventEmitter
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  filterProduct(value:string){
+    // alert("ok")
+    this.clickchanged.emit(value)
+
+  }
+  
+  
 
 }

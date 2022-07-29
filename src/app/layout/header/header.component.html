@@ -5,9 +5,9 @@
                 <input type="search" name="" id="" >  
             </div>
             <ul>
-                <li><a routerLink="/client">Catalogue</a></li>
-                <li><a href="#">MenuBurger</a></li>
-                <li><a href="#">Burger</a></li>
+                <li><button  (click)="filterProduct('catalogue')" >Catalogue</button></li>
+                <li><button (click)="filterProduct('menu')" >MenuBurger</button></li>
+                <li><button (click)="filterProduct('burger')" >Burger</button></li>
                 <li><a href="#">Connexion</a></li>
                 <li><a href="#">Créer Compte</a></li>
             </ul>

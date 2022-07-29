@@ -1,5 +1,5 @@
-<app-header></app-header>
-<app-liste [produits]="catalogue?.produits"></app-liste>
+<app-header (clickchanged)="clickchanged($event)"></app-header>
+<app-liste [produits]="produits"></app-liste>
 <app-footer></app-footer>
 
 

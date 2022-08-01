@@ -4,7 +4,7 @@
     border-top-left-radius: 30px; 
     border-top-right-radius: 30px;   
     background-color: #FF8E00;
-    margin-top: 5%;
+    margin-top: 3%;
     box-sizing: border-box;
 }
 
@@ -25,7 +25,7 @@ ul li{
     display: inline-block;
     justify-content: space-between;
     font-size: 1.5rem;
-    padding:25px;
+    padding:10px;
 }
 ul li a{
     color: black;
@@ -49,16 +49,12 @@ input{
     width: 70%;
     height: 3rem;
 }
-.fa-solid fa-magnifying-glass{
-    color: red;
-    z-index: 1;
-}
 
 .logo img{
-    height: 10%;
+    height: 8%;
     width: 10%;
     float: left;
-    margin-top: -12%;
+    margin-top: -10%;
     margin-left: 8%;
     border-radius: 50%;
     border: #FF8E00 solid 10px;
@@ -68,7 +64,7 @@ input{
     height: 10%;
     width: 8%;
     float: right;
-    margin-top: -11%;
+    margin-top: -10%;
 }
 
 input[type="search i"]{
@@ -78,5 +74,6 @@ input[type="search i"]{
 .recherche{
     height: 20%;
 }
+
 
 

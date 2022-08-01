@@ -10,5 +10,5 @@
 //     catalogue?:string
 //     menuBurgers?:MenuBurger[]
 //     menuPortionFrites?:MenuPortion[]
-//     menuTailleBoissons?:[]
+//     menuboissons?:[]
 // }

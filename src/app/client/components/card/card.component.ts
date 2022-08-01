@@ -4,7 +4,7 @@ import { Produit } from 'src/app/shared/models/produits';
 
 
 @Component({
-  selector: 'app-card',
+  selector: 'abs-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })

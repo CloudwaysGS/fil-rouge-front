@@ -1,0 +1,80 @@
+.contains{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+.details{
+    height: 80vh;
+    width: 40%;
+    margin-top: 1%;
+    /* border: 1px solid red; */
+}
+.dtl1{
+    border-radius: 10px;
+    margin-top: 2%;
+    height: 30vh;
+    /* background-color: #FF8E00; */
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    display: flex;
+}
+.dtl2{
+    border-radius: 10px;
+    height: 40vh;
+    width: 140%;
+    margin-top: 3%;
+    /* background-color: #FF8E00; */
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    display: flex;
+}
+.dtl3{
+    border-radius: 10px;
+    width: 15%;
+    height: 29vh;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    /* border-radius: 10px; */
+    /* background-color: #FF8E00; */
+    display: flex;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    text-align: center  ;
+}
+.log{
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 1%;
+    height: 28vh;
+}
+.desc{
+    border-radius: 10px;
+    width: 40%;
+    height: 94%;
+    margin-top: 1%;
+}
+.desc img{
+    height: 80%;
+}
+.dtl3 input{
+    margin: 5%;
+    width: 90%;
+    /* border-radius: 10px; */
+}
+.prix{
+    height: 20%;
+}
+
+.boissons{
+    /* border: 2px solid rgb(102, 255, 0); */
+    height: 100%;
+    width: 60%;
+}
+.frites{
+    /* border: 2px solid rgb(55, 59, 53); */
+    height: 100%;
+    width: 60%;
+}
+

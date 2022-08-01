@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-security',
+  selector: 'abs-security',
   templateUrl: './security.component.html',
   styleUrls: ['./security.component.css']
 })

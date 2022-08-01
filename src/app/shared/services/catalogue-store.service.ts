@@ -10,13 +10,13 @@ import { Produit } from '../models/produits';
 })
 export class CatalogueStoreService {
   private abs_url:string="http://localhost:3000/catalogues"
+  private urlDetail:string = "http://localhost:3000/detail"
 
   constructor(private http:HttpClient) { }
   all():Observable<Catalogue>{
     return this.http.get<any>(this.abs_url).pipe(
       
       map(data=>{
-        
        // data.produits=[...data[0].menus,...data[1].burgers]
          let catalogue:Catalogue={
              menus:data['hydra:member'][1].menu ,
@@ -45,10 +45,12 @@ export class CatalogueStoreService {
   //   )
   // }
 
-  
-
-
-
-
-  
+  // produit$(id:number,type:string):Observable<Detail> {
+  //   if(type=="menu"){
+  //     return this.http.get<Detail>(`${this.urlDetail}/menus/${id}`)
+  //   }
+  //   return this.http.get<Detail>(`${this.urlDetail}/burgers/${id}`)
+    
+  // }
+ 
 }

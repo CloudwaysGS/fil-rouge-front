@@ -5,7 +5,7 @@ import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.s
 // import { Catalogue } from '../../shared/models/catalogue';
 
 @Component({
-  selector: 'app-catalogue',
+  selector: 'abs-catalogue',
   templateUrl: './catalogue.component.html',
   styleUrls: ['./catalogue.component.css']
 })
@@ -18,29 +18,19 @@ export class CatalogueComponent implements OnInit {
     this.serv.all().subscribe((data)=>this.produits = data.produits)
   }
 
-  filterProduct(type:string){
-      alert("ok")
-      this.serv.all().subscribe(data => {
-        if(type="menu"){
-          this.serv.all().subscribe((data)=>this.produits = data.menus)
-        }
-        else{
-        }
-      })
-    
-    
-  }
-
+  
   clickchanged(type:string){
-      
+      // alert("ok");
       switch (type) {
         case "burger":
-          this.serv.all().subscribe((data)=>this.produits = data.burgers)
-          break;
-          case "menu":
-          this.serv.all().subscribe((data)=>this.produits = data.menus)
-            
-            break;
+        this.serv.all().subscribe((data)=>this.produits = data.burgers)
+        break;
+        case "menu":
+        this.serv.all().subscribe((data)=>this.produits = data.menus)
+        break;
+        case "catalogue":
+        this.serv.all().subscribe((data)=>this.produits = data.produits)
+        break;
       
         default:
           break;

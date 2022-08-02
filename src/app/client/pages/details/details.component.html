@@ -1,15 +1,17 @@
+<!-- {{produits.produit|json}} -->
+
 <abs-header></abs-header>
 
 <div class="contains">
   <div class="details">
     <div class="dtl1">
       <div class="log">
-        <h4>Burger Royal</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora praesentium, vel corporis exercitationem, asperiores sequi enim, numquam quisquam quidem nobis earum temporibus. Vel deserunt nostrum deleniti amet minima porro sint!</p>
+        <h4>{{produits?.produit.nom}}</h4>
+        <p>{{produits?.produit.description}}</p>
       </div>
       <div class="desc">
-      <img src="assets/image/cv.png/" alt="">
-      <h4>4000 FCFA</h4>
+      <img src="data:image/png;base64,{{produits?.produit.imageBlob}}" alt="">
+      <h4>{{produits?.produit.prix}}</h4>
       </div>
       <!-- <p>Burger Royal</p> -->
     </div>
@@ -17,18 +19,15 @@
         <!-- <h2>Complements</h2> -->
         <div class="boissons">
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-            <img class="card-img-top" src="assets/image/fanta.png" alt="Card image cap">
-            <img class="card-img-top" src="assets/image/coca.png" alt="Card image cap">
-            <img class="card-img-top" src="assets/image/sweppes.png" alt="Card image cap">
-            <div> <input type="checkbox" name="" id=""> </div>
+            <!-- <abs-select-boisson></abs-select-boisson> -->
+    
+            <!-- <div> <input type="checkbox" name="" id=""> </div> -->
           </div>
         </div>
         <div class="frites">
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-            <img class="card-img-top" src="assets/image/frite.png" alt="Card image cap">
-            <img class="card-img-top" src="assets/image/frite.png" alt="Card image cap">
-            <img class="card-img-top" src="assets/image/frite.png" alt="Card image cap">
-            <div> <input type="checkbox" name="" id=""> </div>
+            <!--<img class="card-img-top" src="assets/image/frite.png" alt="Card image cap"> -->
+
           </div>
         </div>
       </div>

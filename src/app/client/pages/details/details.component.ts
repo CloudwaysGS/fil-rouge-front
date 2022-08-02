@@ -12,6 +12,7 @@ import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.s
 })
 export class DetailsComponent implements OnInit {
   produits: any
+  
   // produits : Menu| null = null;
 
   constructor(private serv:CatalogueStoreService,private route: ActivatedRoute) { }

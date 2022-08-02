@@ -1,5 +1,4 @@
-<!-- {{produits.produit|json}} -->
-
+<!-- {{produits.portionFrites|json}} -->
 <abs-header></abs-header>
 
 <div class="contains">
@@ -10,8 +9,8 @@
         <p>{{produits?.produit.description}}</p>
       </div>
       <div class="desc">
-      <img src="data:image/png;base64,{{produits?.produit.imageBlob}}" alt="">
-      <h4>{{produits?.produit.prix}}</h4>
+        <img src="data:image/png;base64,{{produits?.produit.imageBlob}}" alt="">
+        <h4>{{produits?.produit.prix}}</h4>
       </div>
       <!-- <p>Burger Royal</p> -->
     </div>
@@ -19,15 +18,19 @@
         <!-- <h2>Complements</h2> -->
         <div class="boissons">
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-            <!-- <abs-select-boisson></abs-select-boisson> -->
-    
-            <!-- <div> <input type="checkbox" name="" id=""> </div> -->
+            <ng-container *ngFor=" let boisson of produits.boissons">
+              <abs-all-boisson [boisson]="boisson"></abs-all-boisson>
+              <div> <input type="checkbox" name="" id=""> </div>
+            </ng-container>
           </div>
         </div>
+
         <div class="frites">
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-            <!--<img class="card-img-top" src="assets/image/frite.png" alt="Card image cap"> -->
-
+            <ng-container *ngFor=" let portionFrites of produits.portionFrites">
+              <abs-all-boisson [portionFrites]="portionFrites"></abs-all-boisson>
+              <div> <input type="checkbox" name="" id=""> </div>
+          </ng-container>            
           </div>
         </div>
       </div>

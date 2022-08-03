@@ -22,9 +22,9 @@ export class DetailsComponent implements OnInit {
     // this.id = this.route.snapshot.paramMap.get('id');
     // this.type = this.route.snapshot.paramMap.get('type');
     // alert("ok")
-        this.serv.produit$(1).subscribe((data)=>{
+        this.serv.produit$(66).subscribe((data)=>{
            this.produits=data
-        });
+        })
         console.log(this.produits)
   }
 

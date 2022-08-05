@@ -25,11 +25,16 @@
 .dtl2{
     border-radius: 10px;
     height: 30vh;
-    width: 140%;
+    width: 195%;
     margin-top: 3%;
+    margin-left: -27%;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     display: flex;  
     gap: 1%;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
 }
 .dtl3{
     border-radius: 10px;
@@ -68,7 +73,7 @@
     /* border-radius: 10px; */
 }
 .input-dl3{
-  margin-top: 0%;
+  margin-top: 60%;
   height: 30%;
 }
 .prix{
@@ -97,8 +102,7 @@
 }
 
 .card h6{
-    margin-top: 105%;
-    margin-left: -220%;
+    
 }
 .card h5{
     margin-top: 120%;
@@ -120,12 +124,36 @@
 }
 
 .catalogue{
-    position: absolute;
-    height: 15%;
-    width: 15%;
+    height: 95%;
+    width: 65%;
     border: 2px solid black;
-    top: 62%;
+    margin-top: -55%;
+    margin-left: 15%;
 }
 
+.nboisson{
+    margin-top: 104%;
+    margin-left: -220%;
+}
+.n1boisson{
+    margin-top: 104%;
+    margin-left: -208%;
+}
+.n2boisson{
+    margin-top: 104%;
+    margin-left: -208%;
+}
+.prixboisson{
+    margin-top: 115%;
+    margin-left: -200%;
+}
 
-
+.inp{
+    margin-left: -100%;
+}
+.inp1{
+    margin-left: -150%;
+}
+.inp2{
+    margin-left: -150%;
+}

@@ -11,5 +11,9 @@ export class NbeBoissonComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  valid(){
+    alert('ok')
+    // let input=document.querySelector('input')
+    // console.log(input)
+  }
 }

@@ -5,5 +5,5 @@ export interface Produit {
     date:string
     prix:number
     description?:string
-    type?:string
+    '@type':string
 }

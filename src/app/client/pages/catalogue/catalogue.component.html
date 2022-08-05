@@ -1,10 +1,11 @@
 <abs-header (clickchanged)="clickchanged($event)"></abs-header>
+
 <ng-container *ngIf="produits == null">
   <div class="load">
     <div class="loader"></div>
   </div>
 </ng-container>
 <ng-container *ngIf="produits != null">
-  <app-liste [produits]="produits"></app-liste>
+  <abs-liste [produits]="produits"></abs-liste>
 </ng-container>
 <abs-footer></abs-footer>

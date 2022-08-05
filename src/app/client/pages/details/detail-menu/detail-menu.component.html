@@ -1,0 +1,87 @@
+<div class="qte-boisson">
+  <div class="component-bottom" >
+    <img src="assets/image/cola.png" height="80%" width="90%" alt="">
+    <h6>Coca cola <input type="number"> </h6>
+  </div>
+  <div class="component-bottom" >
+    <img src="assets/image/sprite.png" height="80%" width="90%" alt="">
+    <h6>Sprite <input type="number"> </h6>
+  </div>
+  <!--<abs-nbe-boisson></abs-nbe-boisson> -->
+</div>
+
+
+
+  
+  <!-- <img src="assets/image/sprite.png" height="25%" width="25%" alt=""> -->
+  <!-- <div class="cart_counter cart-style">
+      <button  class="reduced items-count" type="button">
+          <i class="fa fa-minus"></i>
+      </button>
+      <input type="text" name="qty" id="sst61_menu" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+      <button onclick="var result = document.getElementById('sst61_menu'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button">
+          <i class="fa fa-plus"></i>
+      </button>
+  </div> -->
+  
+
+<!-- {{produits.boissons|json}} -->
+<!-- {{produits.produit.menuTailleBoisson[0].tailleBoison.boissonTailleBoissons[0].boisson|json}} -->
+
+<!-- <abs-header></abs-header>
+<div class="contains">
+  <div class="details">
+    <div class="dtl1">
+      <div class="log">
+        <h4>{{produits?.produit.nom}}: {{produits?.produit.prix}} F</h4>
+        <p>{{produits?.produit.description}}</p>
+      </div>
+      <div class="desc">
+        <img src="data:image/png;base64,{{produits?.produit.imageBlob}}" alt="">
+      </div>
+    </div>
+
+    <div class="dtl2">
+        <div class="boissons">
+          <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
+            <ng-container *ngFor=" let boisson of produits.boissons">
+              <abs-all-boisson [boisson]="boisson"></abs-all-boisson>
+              <div> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
+              <abs-nbe-boisson></abs-nbe-boisson>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="frites">
+          <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
+            <ng-container *ngFor=" let portionFrites of produits.portionFrites">
+              <abs-all-boisson [portionFrites]="portionFrites"></abs-all-boisson>
+              <abs-nbe-boisson></abs-nbe-boisson>
+              <div> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
+          </ng-container>            
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="dtl3">
+    <div class="input-dl3">
+      <ng-container *ngIf="produits.produit['@type']=='Menu'">
+        
+        <div>
+          <abs-detail-menu></abs-detail-menu>
+        </div>
+      </ng-container>
+              <input class="form-control" type="number" placeholder="Quantite burger" min="1" max="10">
+      <div class="prix">
+        <h3>Total: 20 000 FCFA</h3> 
+        <button class="btn btn-sm btn-outline">Ajouter au panier </button> 
+      </div>
+    </div>
+  </div>
+
+</div>
+<abs-footer></abs-footer>
+
+
+ -->

@@ -9,53 +9,54 @@
     height: 80vh;
     width: 40%;
     margin-top: 1%;
-    /* border: 1px solid red; */
 }
 .dtl1{
     border-radius: 10px;
     margin-top: 2%;
-    height: 30vh;
+    width: 85%;
+    height: 45vh;
     background-color: #FF8E00;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
 }
 .dtl2{
     border-radius: 10px;
     height: 30vh;
     width: 140%;
     margin-top: 3%;
-    /* background-color: #FF8E00; */
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     display: flex;  
     gap: 1%;
-    /* flex-wrap: wrap; */
 }
 .dtl3{
     border-radius: 10px;
-    width: 15%;
-    height: 29vh;
+    width: 21%;
+    height: 45vh;
     margin-top: 2%;
-    margin-left: 1%;
-    /* box-shadow: 0 5px 5px rgba(0,0,0,0.5); */
+    margin-left:-5%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
     /* border-radius: 10px; */
     background-color: #FF8E00;
     display: flex;
     display: inline-block;
-    justify-content: center;
+    justify-content: center; 
     justify-items: center;
-    text-align: center  ;
+    text-align: center  ; 
 }
 .log{
     border-radius: 10px;
     width: 60%;
-    margin-top: 1%;
-    height: 28vh;
+    margin-top: 12%;
+    height: 80vh;
 }
 .desc{
     border-radius: 10px;
     width: 40%;
-    height: 94%;
-    margin-top: 1%;
+    height: 60%;
+    margin-top: 8%;
 }
 .desc img{
     height: 80%;
@@ -63,7 +64,12 @@
 .dtl3 input{
     margin: 5%;
     width: 90%;
+
     /* border-radius: 10px; */
+}
+.input-dl3{
+  margin-top: 0%;
+  height: 30%;
 }
 .prix{
     height: 20%;
@@ -72,97 +78,54 @@
 .boissons{
     /* border: 2px solid rgb(102, 255, 0); */
     height: 100%;
-    width: 10%;
+    width: 5%;
     overflow-x: scroll;
     width: 100%;
     background-color: #FF8E00;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-
+    border-radius: 10px;
 }
 .frites{
     /* border: 2px solid rgb(55, 59, 53); */
     height: 100%;
-    width: 10%;
+    width: 5%;
     overflow-x: scroll;
     width: 100%;
     background-color: #FF8E00;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);
-
+    border-radius: 10px;
 }
 
-/* .card{
-    
+.card h6{
+    margin-top: 105%;
+    margin-left: -220%;
+}
+.card h5{
+    margin-top: 120%;
+    margin-left: -280%;
+}
+.card h4{
+    margin-top: 100%;
+    margin-left: -160%;
+}
 
-} */
-
-body {
-    font-family: "Open Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    color: #8184a1;
-    line-height: 1.3;
-  }
-  h4 {
-    margin-top: 0;
-    margin-bottom: 50px;
-  }
-  /* a:link, a:visited {
-    transition: color 0.15s ease 0s, border-color 0.15s ease 0s, background-color 0.15s ease 0s;
-  } */
-  .container {
-    display: flex;
+.boisson-GM{
+  height: 100%;
+    width: 5%;
+    overflow-x: scroll;
     width: 100%;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .quantity {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-  .quantity__minus,
-  .quantity__plus {
-    display: block;
-    width: 22px;
-    height: 23px;
-    margin: 0;
-    background: #dee0ee;
-    text-decoration: none;
-    text-align: center;
-    line-height: 23px;
-  }
-  .quantity__minus:hover,
-  .quantity__plus:hover {
-    background: #575b71;
-    color: #fff;
-  } 
-  .quantity__minus {
-    border-radius: 3px 0 0 3px;
-  }
-  .quantity__plus {
-    border-radius: 0 3px 3px 0;
-  }
-  .quantity__input {
-    width: 32px;
-    height: 19px;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    border-top: 2px solid #dee0ee;
-    border-bottom: 2px solid #dee0ee;
-    border-left: 1px solid #dee0ee;
-    border-right: 2px solid #dee0ee;
-    background: #fff;
-    color: #8184a1;
-  }
-  .quantity__minus:link,
-  .quantity__plus:link {
-    color: #8184a1;
-  } 
-  .quantity__minus:visited,
-  .quantity__plus:visited {
-    color: #fff;
-  }
+    background-color: #FF8E00;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.catalogue{
+    position: absolute;
+    height: 15%;
+    width: 15%;
+    border: 2px solid black;
+    top: 62%;
+}
+
+
+

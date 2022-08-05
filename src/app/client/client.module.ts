@@ -11,6 +11,15 @@ import { DetailsComponent } from './pages/details/details.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListeComponent } from './components/liste/liste.component';
+import { AllBoissonComponent } from './pages/details/all-boisson/all-boisson.component';
+import { NbeBoissonComponent } from './pages/details/nbe-boisson/nbe-boisson.component';
+import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.component';
+// import { CardDetailComponent } from './pages/details/card-detail/card-detail.component';
+// import { SelectBoissonComponent } from './pages/details/select-boisson/select-boisson.component';
+// import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.component';
+// import { ChoixBoissonComponent } from './pages/details/choix-boisson/choix-boisson.component';
+// import { CardDetailComponent } from './pages/details/card-detail/card-detail.component';
+// import { CardCountComponent } from './pages/details/card-count/card-count.component';
 
 
 @NgModule({
@@ -20,7 +29,16 @@ import { ListeComponent } from './components/liste/liste.component';
     HomeComponent,
     DetailsComponent,
     CatalogueComponent,
-    ListeComponent
+    ListeComponent,
+    AllBoissonComponent,
+    NbeBoissonComponent,
+    DetailMenuComponent,
+    // CardDetailComponent,
+    // SelectBoissonComponent,
+    // DetailMenuComponent,
+    // ChoixBoissonComponent,
+    // CardDetailComponent,
+    // CardCountComponent
   ],
   imports: [
     CommonModule,

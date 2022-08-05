@@ -1,25 +1,49 @@
-<!-- {{produits.portionFrites|json}} -->
-<abs-header></abs-header>
+<!-- {{produits.boissons|json}} -->
+{{produits.tailleBoisson[2].boissonTailleBoissons[0].boisson.prix|json}}
 
+<abs-header></abs-header>
 <div class="contains">
   <div class="details">
     <div class="dtl1">
       <div class="log">
-        <h4>{{produits?.produit.nom}}</h4>
+        <h4>{{produits?.produit.nom}} </h4>
         <p>{{produits?.produit.description}}</p>
       </div>
       <div class="desc">
         <img src="data:image/png;base64,{{produits?.produit.imageBlob}}" alt="">
-        <h4>{{produits?.produit.prix}}</h4>
+        <h4>{{produits?.produit.prix}}  F</h4>
       </div>
-      <!-- <p>Burger Royal</p> -->
+      <div class="catalogue">
+        <img height="100%" src="data:image/png;base64,{{produits?.tailleBoisson[1]?.boissonTailleBoissons[0]?.boisson}}">
+
+      </div>
     </div>
-      <div class="dtl2">
-        <!-- <h2>Complements</h2> -->
+
+    <div class="dtl2">
         <div class="boissons">
+          <h4>Boisson GM</h4>
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-            <ng-container *ngFor=" let boisson of produits.boissons">
-              <abs-all-boisson [boisson]="boisson"></abs-all-boisson>
+
+            <ng-container *ngFor=" let tailleBoisson of produits.tailleBoisson">
+              <img  class="card-img-top" src="data:image/png;base64,{{produits?.tailleBoisson[1]?.boissonTailleBoissons[0]?.boisson.imageBlob}}">
+              <div> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
+              <abs-nbe-boisson></abs-nbe-boisson>
+              <h6>{{produits?.tailleBoisson[1]?.boissonTailleBoissons[0]?.boisson.nom}}</h6>
+              <h4>:{{produits.tailleBoisson[1].libelle}}</h4>
+              <h5>{{produits?.tailleBoisson[1]?.boissonTailleBoissons[0]?.boisson.prix}} FCFA</h5>
+            </ng-container>
+          
+          </div>
+        </div>
+
+        <div class="boisson-GM">
+          <h4>boissons PM</h4>
+          <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
+            <ng-container *ngFor=" let boissons of produits.produit.menuTailleBoisson[0].tailleBoison.boissonTailleBoissons">
+              <img class="card-img-top" src="data:image/png;base64,{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.imageBlob}}">
+              <h6>{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.nom}}</h6>
+              <h4>:{{produits.tailleBoisson[2].libelle}}</h4>
+              <h5>{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.prix}} FCFA</h5>
               <div> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
               <abs-nbe-boisson></abs-nbe-boisson>
             </ng-container>
@@ -27,26 +51,38 @@
         </div>
 
         <div class="frites">
+          <h4>Frites</h4>
+
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
             <ng-container *ngFor=" let portionFrites of produits.portionFrites">
-              <abs-all-boisson [portionFrites]="portionFrites"></abs-all-boisson>
-              <abs-nbe-boisson></abs-nbe-boisson>
+              <div><img class="card-img-top" src="data:image/png;base64,{{portionFrites.imageBlob}}" ></div>
+              <h6>{{portionFrites.nom}}</h6>
+              <h6>{{portionFrites.prix}} F</h6>
               <div> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
+              <abs-nbe-boisson></abs-nbe-boisson>
           </ng-container>            
           </div>
         </div>
+
+        
       </div>
-    
   </div>
-<div class="dtl3">
-  <input class="form-control" type="number" placeholder="Quantite burger">
-  <!-- <input class="form-control" type="number" placeholder="Quantite boisson" readonly>
-  <input class="form-control" type="number" placeholder="Quantite portion frite" readonly> -->
-    <div class="prix">
-      <h3>Total: 20 000 FCFA</h3>    
+
+  <div class="dtl3">
+      <div class="input-dl3">
+
+        <!-- <ng-container *ngIf="produits.produit['@type']=='Menu'"> -->
+          <div>
+            <!-- <abs-detail-menu></abs-detail-menu> -->
+          </div>
+        <!-- </ng-container> -->
+        <!-- <input class="form-control" type="number" placeholder="Quantite burger" min="1" max="10"> -->
+      <div class="prix">
+        <h3>Total: 20 000 FCFA</h3> <br>
+        <button class="btn btn-sm btn-outline">Ajouter au panier </button> 
+      </div>
     </div>
+  </div>
 
 </div>
-</div>
-
 <abs-footer></abs-footer>

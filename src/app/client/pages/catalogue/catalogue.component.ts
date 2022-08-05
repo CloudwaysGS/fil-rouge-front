@@ -18,7 +18,6 @@ export class CatalogueComponent implements OnInit {
     this.serv.all().subscribe((data)=>this.produits = data.produits)
   }
 
-  
   clickchanged(type:string){
       // alert("ok");
       switch (type) {

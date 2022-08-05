@@ -1,6 +1,6 @@
 
         <div class="card" style="width: 18rem;">
-        <img  routerLink="/client/details/1" src="data:image/PNG;base64,{{produits?.imageBlob}}" class="card-img-top" alt="..." height="50%">
+        <img  routerLink="/client/details/{{produits?.id}}" src="data:image/PNG;base64,{{produits?.imageBlob}}" class="card-img-top" alt="..." height="50%">
         <div class="card-body">
           <h5 class="card-title">{{produits?.prix}} FCFA</h5>
           <h5 class="card-title">{{produits?.nom}}</h5>

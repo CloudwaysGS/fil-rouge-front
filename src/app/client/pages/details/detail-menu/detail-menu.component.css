@@ -1,0 +1,14 @@
+.qte-boisson{
+    /* box-shadow: 0 5px 5px rgba(0,0,0,0.5); */
+    height: 150%;
+    width: 90%;
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+    /* background-color: white; */
+}
+h6 input{
+    width: 20%;
+    margin-top: 3%;
+    margin-left: 1%;
+}

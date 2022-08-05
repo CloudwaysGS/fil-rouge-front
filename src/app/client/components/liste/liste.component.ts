@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Produit } from 'src/app/shared/models/produits';
 
 @Component({
-  selector: 'app-liste',
+  selector: 'abs-liste',
   templateUrl: './liste.component.html',
   styleUrls: ['./liste.component.css']
 })

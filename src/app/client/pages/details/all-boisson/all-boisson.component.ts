@@ -8,8 +8,10 @@ import { Produit } from 'src/app/shared/models/produits';
 })
 export class AllBoissonComponent implements OnInit {
 
-@Input('boisson') boisson : Produit | null = null
-@Input('portionFrites') portionFrites : Produit | null = null
+produits : Produit[] | null = null
+portionFrites : Produit[] | null = null
+tailleBoisson : any[] | null = null
+
 
   constructor() { }
 

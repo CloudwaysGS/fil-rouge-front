@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SecurityComponent } from './security/security.component';
+import { RouterModule } from '@angular/router';
+// import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    SecurityComponent
+    SecurityComponent,
+    // PanierComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

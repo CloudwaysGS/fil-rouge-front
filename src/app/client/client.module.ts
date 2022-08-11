@@ -14,6 +14,7 @@ import { ListeComponent } from './components/liste/liste.component';
 import { AllBoissonComponent } from './pages/details/all-boisson/all-boisson.component';
 import { NbeBoissonComponent } from './pages/details/nbe-boisson/nbe-boisson.component';
 import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.component';
+import { PanierComponent } from './panier/panier.component';
 // import { CardDetailComponent } from './pages/details/card-detail/card-detail.component';
 // import { SelectBoissonComponent } from './pages/details/select-boisson/select-boisson.component';
 // import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.component';
@@ -33,6 +34,7 @@ import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.com
     AllBoissonComponent,
     NbeBoissonComponent,
     DetailMenuComponent,
+    PanierComponent,
     // CardDetailComponent,
     // SelectBoissonComponent,
     // DetailMenuComponent,

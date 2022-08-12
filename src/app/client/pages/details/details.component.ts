@@ -5,6 +5,7 @@ import { Catalogue } from 'src/app/shared/models/catalogue';
 import { Detail, Menu } from 'src/app/shared/models/details';
 import { Produit } from 'src/app/shared/models/produits';
 import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.service';
+import { PanierService } from 'src/app/shared/services/panier.service';
 
 @Component({
   selector: 'abs-details',
@@ -14,7 +15,7 @@ import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.s
 export class DetailsComponent implements OnInit {
   produits: any
 
-  constructor(private serv:CatalogueStoreService,private route: Router) { }
+  constructor(private serv:CatalogueStoreService,private route: Router,private panierServ:PanierService) { }
 
   ngOnInit(): void {
   
@@ -38,6 +39,12 @@ export class DetailsComponent implements OnInit {
   valider(b:any,c:any){
     // alert("ok")
     let produits
+  }
+
+  addNum(f:any, g:any){
+    // alert("ok")
+    f['quantite']=g
+    this.panierServ.addToCart(f)
   }
 
 }

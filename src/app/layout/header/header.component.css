@@ -61,7 +61,7 @@ input{
 }
 
 .panier img{
-    height: 10%;
+    height: 9%;
     width: 8%;
     float: right;
     margin-top: -9%;
@@ -73,6 +73,11 @@ input[type="search i"]{
 
 .recherche{
     height: 20%;
+}
+h4{
+    margin-right: 6%;
+    float: right;
+    color: red;
 }
 
 

@@ -6,4 +6,5 @@ export interface Produit {
     prix:number
     description?:string
     '@type':string
+    quantite?:number
 }

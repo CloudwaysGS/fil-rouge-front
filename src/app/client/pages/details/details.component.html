@@ -15,8 +15,7 @@
         <h4>{{produits?.produit.prix}}F</h4>
       </div>
       
-    </div>
-
+    </div> 
     <div class="dtl2">
         <div class="boissons">
           <h4>Complements</h4>
@@ -33,7 +32,8 @@
       
       
       <div class="dtl3">
-        <input class="form-control" type="number" placeholder="Quantite burger" min="1" max="10">
+        
+        <input #quantite class="form-control" type="number" placeholder="Quantite menu" min="1" max="10">
         <!-- <input class="inputGM" [id]=" 'input'+tailleBoisson.id" (keyup)="valid(tailleBoisson.id,10)" type="number" placeholder="1"  min="1" max="10"> -->
         <div class="input-dl3">
           
@@ -86,7 +86,7 @@
         </ng-container>
           <div class="prix">
             <h3>Total: 20 000 FCFA</h3> <br>
-            <button class="btn btn btn-outline">Ajouter au panier </button> 
+            <button (click)="addNum(produits.produit,quantite.value)" class="btn btn btn-outline">Ajouter au panier</button> 
           </div>
       
     </div>

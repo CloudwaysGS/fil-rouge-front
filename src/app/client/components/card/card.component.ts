@@ -24,8 +24,10 @@ constructor(private panierServ:PanierService) { }
   }
 
   addPanier(product:any) {
-    alert("ok")
+    // alert("ok")
     this.panierServ.addToCart(product);
   }
+
+
 
 }

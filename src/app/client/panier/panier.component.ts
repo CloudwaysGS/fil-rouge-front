@@ -13,8 +13,12 @@ export class PanierComponent implements OnInit {
   constructor(private panierServ:PanierService) { }
 
   items$=this.panierServ.items$
+
   ngOnInit(): void {
   }
 
-
+  remove(a:any){
+    // alert("ok")
+    this.panierServ.removePanier(a)
+  }
 }

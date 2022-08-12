@@ -1,14 +1,44 @@
+<div
+  *ngIf="tailleBoisson"
+  class="card border border-0"
+  style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%"
+>
+  <div>
+    <img
+      class="card-img-top"
+      src="data:image/png;base64,{{ tailleBoisson.imageBlob }}"
+    />
+  </div>
+  <div>
+    <input
+      type="checkbox"
+      (change)="addBoisson(tailleBoisson)"
+      name=""
+      id="{{ tailleBoisson.id }}"
+      style="position: absolute; margin-left: -20%; top: 0"
+    />
+  </div>
+  <input
+    #quantite
+    class="inputGM"
+    (change)="changeQteBoisson(tailleBoisson.id, quantite.value)"
+    [id]="'input' + tailleBoisson.id"
+    (keyup)="valid(tailleBoisson.id, 10)"
+    type="number"
+    placeholder="1"
+    min="1"
+    max="10"
+  />
+  <span
+    class="spanGM"
+    [id]="'erreur' + tailleBoisson.id"
+    style="margin-left: -290%; color: red"
+  ></span>
+  <h6 class="n2boisson">{{ tailleBoisson.nom }}</h6>
+  <h3 class="prixboisson">{{ tailleBoisson.prix }} F</h3>
+</div>
 
-    <div *ngIf="tailleBoisson"  class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%; ">
-        <div><img class="card-img-top" src="data:image/png;base64,{{tailleBoisson.imageBlob}}" ></div>
-        <div> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
-        <input class="inputGM" [id]=" 'input'+tailleBoisson.id" (keyup)="valid(tailleBoisson.id,10)" type="number" placeholder="1"  min="1" max="10">
-        <span class="spanGM" [id]=" 'erreur'+tailleBoisson.id " style="margin-left: -290%; color:red"></span>
-        <h6 class="n2boisson">{{tailleBoisson.nom}}</h6>
-        <h3 class="prixboisson">{{tailleBoisson.prix}} F</h3>
-    </div>    
-
-    <!-- <div  *ngIf="tailleBoissons" class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
+<!-- <div  *ngIf="tailleBoissons" class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
           <img class="card-img-top" src="data:image/png;base64,{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.imageBlob}}">
           <h6 class="n1boisson">{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.nom}}</h6>
           <h4>:{{produits.tailleBoisson[2].libelle}}</h4>
@@ -17,7 +47,7 @@
           <input [id]=" 'input'+produits.tailleBoisson[2].id " (keyup)="valid(produits.tailleBoisson[2].id,10)" type="number" placeholder="1"  min="1" max="10">
     </div> -->
 
-    <!-- <div  *ngIf="tailleBoissonss" class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
+<!-- <div  *ngIf="tailleBoissonss" class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
           <img class="card-img-top" src="data:image/png;base64,{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.imageBlob}}">
           <h6 class="n1boisson">{{produits?.tailleBoisson[2]?.boissonTailleBoissons[0]?.boisson.nom}}</h6>
           <h4>:{{produits.tailleBoisson[2].libelle}}</h4>
@@ -26,11 +56,26 @@
           <input [id]=" 'input'+ produits.tailleBoisson[2].id " (keyup)="valid(produits.tailleBoisson[2].id,10)" type="number" placeholder="1"  min="1" max="10">
     </div> -->
 
-      <div  *ngIf="portionFrites" class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-        <div><img class="card-img-top" src="data:image/png;base64,{{portionFrites.imageBlob}}" ></div>
-        <h6 class="n2firte">{{portionFrites.nom}}</h6>
-        <h3 class="prixfrite">{{portionFrites.prix}} F</h3>
-        <div class="inp"> <input type="checkbox" name="" id="" style="position:absolute; margin-left:-20%; top: 0;"> </div>
-        <input class="InpFrite" type="number" name="" id="">
-      </div>
-  
+<div
+  *ngIf="portionFrites"
+  class="card"
+  style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%"
+>
+  <div>
+    <img
+      class="card-img-top"
+      src="data:image/png;base64,{{ portionFrites.imageBlob }}"
+    />
+  </div>
+  <h6 class="n2firte">{{ portionFrites.nom }}</h6>
+  <h3 class="prixfrite">{{ portionFrites.prix }} F</h3>
+  <div class="inp">
+    <input
+      type="checkbox"
+      name=""
+      id=""
+      style="position: absolute; margin-left: -20%; top: 0"
+    />
+  </div>
+  <input class="InpFrite" type="number" name="" id="" />
+</div>

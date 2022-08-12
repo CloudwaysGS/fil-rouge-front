@@ -21,4 +21,5 @@ export class PanierComponent implements OnInit {
     // alert("ok")
     this.panierServ.removePanier(a)
   }
+  
 }

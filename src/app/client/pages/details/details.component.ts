@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Catalogue } from 'src/app/shared/models/catalogue';
 import { Detail, Menu } from 'src/app/shared/models/details';
+import { Panier } from 'src/app/shared/models/panier';
 import { Produit } from 'src/app/shared/models/produits';
 import { CatalogueStoreService } from 'src/app/shared/services/catalogue-store.service';
 import { PanierService } from 'src/app/shared/services/panier.service';
@@ -41,10 +42,29 @@ export class DetailsComponent implements OnInit {
     let produits
   }
 
-  addNum(f:any, g:any){
-    // alert("ok")
-    f['quantite']=g
-    this.panierServ.addToCart(f)
+  addNum(produit:Produit, qte:any){
+  
+   
+    this.panierServ.addPanier(produit,qte)
+    console.log(this.panierServ.panier.value)
+    //f['quantite']=g
+    //this.panierServ.addToCart(f)
+  }
+
+  addBoissonMenu(boisson:Produit,menuId:any){
+    boisson.quantite=1
+     let produit=  this.panierServ.panier.value.produits.find(p=> p.id==menuId)
+      if(produit) produit.boissons?.push(boisson)
+      console.log(produit)
+  
+  }
+
+  changeQteBoissonMenu(boissonId:any,qte:any,menuId:any){
+
+          let menu=  this.panierServ.panier.value.produits.find(p=> p.id==menuId)
+          let boisson =menu?.boissons?.find(p=>p.id==boissonId)
+          if(boisson) boisson.quantite=qte;
+          console.log(boisson)
   }
 
 }

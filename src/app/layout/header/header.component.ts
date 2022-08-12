@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  items$=this.PanierServ.items$
+  items$=this.PanierServ.panier
   
   
 

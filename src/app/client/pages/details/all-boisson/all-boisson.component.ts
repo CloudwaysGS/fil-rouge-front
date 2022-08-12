@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Produit } from 'src/app/shared/models/produits';
+import { PanierService } from 'src/app/shared/services/panier.service';
 
 @Component({
   selector: 'abs-all-boisson',
@@ -15,9 +16,9 @@ produits : any | null = null
 @Input('tailleBoissonss') tailleBoissonss: any | null=null 
 @Input('portionFrites') portionFrites: any | null=null 
 // @Input() tailleBoisson : Produit[] | null = null
+@Input('typeBoisson') type:string='boissons'
 
-
-  constructor() { }
+  constructor(private panierService:PanierService) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,24 @@ produits : any | null = null
     console.log(b);
     
   }
+  addBoisson(produit:Produit){
+    produit.quantite=1
+   if(this.type=="boissons")
+       this.panierService.panier.value.boissons.push(produit)
+  if(this.type=="portions")
+       this.panierService.panier.value.portions.push(produit)
+   console.log(this.panierService.panier.value)
+  }
 
+  changeQteBoisson(boissonId:any,qte:any){
+    let produit;
+        if(this.type=="boissons")
+          produit =this.panierService.panier.value.boissons.find(p=>p.id==boissonId)
+        if(this.type=="portions")
+          produit =this.panierService.panier.value.portions.find(p=>p.id==boissonId)
+          
+          if(produit) produit.quantite=qte;
+        console.log(this.panierService.panier.value)
+  }
 
 }

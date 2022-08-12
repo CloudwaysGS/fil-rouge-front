@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map,Observable,take } from 'rxjs';
+import { Panier } from '../models/panier';
 import { Produit } from '../models/produits';
 
 @Injectable({
@@ -59,4 +60,26 @@ export class PanierService {
       return pro.id === id;
     });
   }
+
+  // getTotal(){
+  //   if(this.cardItems){
+  //     this.totalAmount = 0
+  //     this.cardItems.forEach((items))=>{
+  //       this.totalAmount+=(item.quantite*items$.prix)
+  //     }
+  //   }
+  // }
+
+  panier:BehaviorSubject<Panier>=new BehaviorSubject<Panier>({
+    produits:[],
+    portions:[],
+    boissons:[]
+  })
+
+  addPanier(produit:Produit, qte:any){
+      produit.boissons=[]
+      this.panier.value.produits.push(produit);
+  }
+
+
 }

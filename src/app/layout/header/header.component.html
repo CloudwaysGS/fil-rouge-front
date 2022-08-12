@@ -1,29 +1,53 @@
 <div class="contain">
-    <div class="header center">
-        <i class="fa-solid fa-cart-arrow-up"></i>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <h4>{{(items$|async).length}}</h4>
-        <div class="ul center">
-            <div class="seach">
-                <input type="search" name="" id="" > 
- 
-            </div>
-            <ul>
-                <!-- <button type="button" class="btn btn-outline-primary">Primary</button> -->
+  <div class="header center">
+    <i class="fa-solid fa-cart-arrow-up"></i>
+    <i class="fa-solid fa-cart-shopping"></i>
+    <h4 *ngIf="(items$ | async) as val ">{{val.produits.length+val.boissons.length }}</h4>
+    <div class="ul center">
+      <div class="seach">
+        <input type="search" name="" id="" />
+      </div>
+      <ul>
+        <!-- <button type="button" class="btn btn-outline-primary">Primary</button> -->
 
-                <li><button  (click)="filterProduct('catalogue')" class="btn btn-outline-dark">Catalogue</button></li>
-                <li><button (click)="filterProduct('menu')" class="btn btn-outline-dark">MenuBurger</button></li>
-                <li><button (click)="filterProduct('burger')" class="btn btn-outline-dark">Burger</button></li>
-                <li><button type="button" class="btn btn-outline-dark">Connexion</button></li>
-                <li><button type="button" class="btn btn-outline-dark">Créer compte</button></li>
-            </ul>
-        </div> 
+        <li>
+          <button
+            (click)="filterProduct('catalogue')"
+            class="btn btn-outline-dark"
+          >
+            Catalogue
+          </button>
+        </li>
+        <li>
+          <button (click)="filterProduct('menu')" class="btn btn-outline-dark">
+            MenuBurger
+          </button>
+        </li>
+        <li>
+          <button
+            (click)="filterProduct('burger')"
+            class="btn btn-outline-dark"
+          >
+            Burger
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-outline-dark">Connexion</button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-outline-dark">
+            Créer compte
+          </button>
+        </li>
+      </ul>
     </div>
-    <div class="logo">
-        <img src="assets/image/burger.png" alt="">
-    </div>
-   <div class="panier">
-        <a routerLink="/client/panier"> <img  src="assets/image/panier.png" alt="" srcset=""> </a>
-   </div>
+  </div>
+  <div class="logo">
+    <img src="assets/image/burger.png" alt="" />
+  </div>
+  <div class="panier">
+    <a routerLink="/client/panier">
+      <img src="assets/image/panier.png" alt="" srcset="" /> 5
+    </a>
+  </div>
 </div>
-       

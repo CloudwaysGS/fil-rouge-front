@@ -7,91 +7,153 @@
   <div class="details">
     <div class="dtl1">
       <div class="log">
-        <h4>{{produits?.produit.nom}} </h4>
-        <p>{{produits?.produit.description}}</p>
+        <h4>{{ produits?.produit.nom }}</h4>
+        <p>{{ produits?.produit.description }}</p>
       </div>
       <div class="desc">
-        <img src="data:image/png;base64,{{produits?.produit.imageBlob}}" alt="">
-        <h4>{{produits?.produit.prix}}F</h4>
+        <img
+          src="data:image/png;base64,{{ produits?.produit.imageBlob }}"
+          alt=""
+        />
+        <h4>{{ produits?.produit.prix }}F</h4>
       </div>
-      
-    </div> 
-    <div class="dtl2">
-        <div class="boissons">
-          <h4>Complements</h4>
-          <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
-            <ng-container *ngFor=" let tailleBoisson of produits.boissons">
-             <abs-all-boisson [tailleBoisson]="tailleBoisson"></abs-all-boisson>
-            </ng-container>
-          </div>
-        </div>
-
-        
-      </div>
-      <span [id]=" 'erreur'+produits.tailleBoisson[1].id " style="margin-left: -110%; color:red"></span></div>
-      
-      
-      <div class="dtl3">
-        
-        <input #quantite class="form-control" type="number" placeholder="Quantite menu" min="1" max="10">
-        <!-- <input class="inputGM" [id]=" 'input'+tailleBoisson.id" (keyup)="valid(tailleBoisson.id,10)" type="number" placeholder="1"  min="1" max="10"> -->
-        <div class="input-dl3">
-          
-          <ng-container *ngIf="produits.produit['@type']=='Menu'">
-            <div>
-              <div class="catalogue">
-                <table class="table table-striped">
-                  <thead>
-                  <tr>
-                    <th scope="col">Image</th>
-                    <th scope="col">Nom Produit</th>
-                    <th scope="col">Quantite</th>
-                    <th scope="col">Prix</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let menuBurger of produits.produit.menuBurgers">
-      
-                  <td><img src="data:image/png;base64,{{menuBurger.burger.imageBlob}}" alt="" style="width: 4rem;"></td>
-                  <td>{{ menuBurger.burger.nom }}</td>
-                  <td>{{menuBurger.quantite}}</td>
-                  <td>{{menuBurger.burger.prix}}</td>
-      
-                  </tr>
-      
-                  <tr *ngFor="let portionFrites of produits.produit.menuPortionFrites">
-      
-                    <td> <img src="data:image/PNG;base64,{{portionFrites.portionFrite.imageBlob}}"  alt="" style="width: 3rem;">  </td>
-                    <td>{{portionFrites.portionFrite.nom}}</td>
-                    <td>{{portionFrites.quantite}}</td>
-                    <td>{{portionFrites.portionFrite.prix}}</td>
-        
-                  </tr>
-      
-                    <tr *ngFor="let taille of produits.produit.menuTailleBoisson">
-                      <td><input type="radio" name="" id=""></td>
-                      <td>{{taille.tailleBoison.libelle}}</td>
-                      
-                      <ng-container  *ngFor=" let boisson of taille.tailleBoison.boissonTailleBoissons">
-                        <td><img src="data:image/PNG;base64,{{boisson.boisson.imageBlob}}"  alt="" style="width: 3rem;"></td>
-                      <td> <input type="checkbox" value="{{boisson.boisson.id}}" (click)="valider(boisson.boisson.id,taille.id)" name="" id="">{{boisson.boisson.nom}} {{boisson.quantiteStock}} <br>{{boisson.boisson.prix}}</td>
-                      </ng-container>
-
-                      </tr>
-                </tbody>
-      
-              </table>
-            </div>
-          </div>
-        </ng-container>
-          <div class="prix">
-            <h3>Total: 20 000 FCFA</h3> <br>
-            <button (click)="addNum(produits.produit,quantite.value)" class="btn btn btn-outline">Ajouter au panier</button> 
-          </div>
-      
     </div>
+    <div class="dtl2">
+      <div class="boissons">
+        <h4>Complements</h4>
+        <div
+          class="card"
+          style="
+            width: 8rem;
+            height: 8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25%;
+          "
+        >
+          <ng-container *ngFor="let tailleBoisson of produits.boissons">
+            <abs-all-boisson [tailleBoisson]="tailleBoisson"></abs-all-boisson>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <span
+      [id]="'erreur' + produits.tailleBoisson[1].id"
+      style="margin-left: -110%; color: red"
+    ></span>
   </div>
 
+  <div class="dtl3">
+    <input
+      #quantite
+      class="form-control"
+      type="number"
+      placeholder="Quantite menu"
+      min="1"
+      max="10"
+    />
+    <!-- <input class="inputGM" [id]=" 'input'+tailleBoisson.id" (keyup)="valid(tailleBoisson.id,10)" type="number" placeholder="1"  min="1" max="10"> -->
+    <div class="input-dl3">
+      <ng-container *ngIf="produits.produit['@type'] == 'Menu'">
+        <div>
+          <div class="catalogue">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Image</th>
+                  <th scope="col">Nom Produit</th>
+                  <th scope="col">Quantite</th>
+                  <th scope="col">Prix</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let menuBurger of produits.produit.menuBurgers">
+                  <td>
+                    <img
+                      src="data:image/png;base64,{{
+                        menuBurger.burger.imageBlob
+                      }}"
+                      alt=""
+                      style="width: 4rem"
+                    />
+                  </td>
+                  <td>{{ menuBurger.burger.nom }}</td>
+                  <td>{{ menuBurger.quantite }}</td>
+                  <td>{{ menuBurger.burger.prix }}</td>
+                </tr>
+
+                <tr
+                  *ngFor="
+                    let portionFrites of produits.produit.menuPortionFrites
+                  "
+                >
+                  <td>
+                    <img
+                      src="data:image/PNG;base64,{{
+                        portionFrites.portionFrite.imageBlob
+                      }}"
+                      alt=""
+                      style="width: 3rem"
+                    />
+                  </td>
+                  <td>{{ portionFrites.portionFrite.nom }}</td>
+                  <td>{{ portionFrites.quantite }}</td>
+                  <td>{{ portionFrites.portionFrite.prix }}</td>
+                </tr>
+
+                <tr *ngFor="let taille of produits.produit.menuTailleBoisson">
+                  <td>
+                    {{ taille.tailleBoison.libelle }} ({{ taille.quantite }} )
+                    <br />
+                    {{ taille.tailleBoison.prix }} CFA
+                  </td>
+
+                  <ng-container
+                    *ngFor="
+                      let boisson of taille.tailleBoison.boissonTailleBoissons
+                    "
+                  >
+                    <td>
+                      <img
+                        src="data:image/PNG;base64,{{
+                          boisson.boisson.imageBlob
+                        }}"
+                        alt=""
+                        style="width: 3rem"
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        (change)=" addBoissonMenu(boisson.boisson, produits?.produit.id)"
+                        value="{{ boisson.boisson.id }}"
+                        (click)="valider(boisson.boisson.id, taille.id)"
+                        name=""
+                        id=""
+                      />{{ boisson.boisson.nom }} 
+                      <input #quantite (click)="changeQteBoissonMenu(boisson.boisson.id ,quantite.value,produits?.produit.id)" type="number" max=" {{boisson.quantiteStock}}" value="0">
+                     
+                        
+                    </td>
+                  </ng-container>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ng-container>
+      <div class="prix">
+        <h3>Total: 20 000 FCFA</h3>
+        <br />
+        <button
+          (click)="addNum(produits.produit, quantite.value)"
+          class="btn btn btn-outline"
+        >
+          Ajouter au panier
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 <abs-footer></abs-footer>
 <!-- <div class="boisson-GM">
@@ -109,7 +171,7 @@
           </div>
         </div> -->
 
-        <!-- <div class="boisson-GM">
+<!-- <div class="boisson-GM">
           <h4>Canettes</h4>
           <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
             <ng-container *ngFor=" let boissons of produits.produit.menuTailleBoisson[0].tailleBoison.boissonTailleBoissons">

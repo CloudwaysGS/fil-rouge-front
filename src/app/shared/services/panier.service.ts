@@ -22,7 +22,7 @@ export class PanierService {
   addToCart(product: any) {
     this.items$.pipe(
       take(1),
-      map((products) => {
+      map((products,index) => {
         if (!this.isExistProduit(products, product.id)) {
           product.quantite = 1
           products.push(product);
@@ -30,8 +30,11 @@ export class PanierService {
         }
         else {
           products.forEach((element: any) => {
-            element.quantite=Number(element.quantite)
-            element.quantite += 1
+            if(element.id==product.id){
+              // element.quantite=Number(element.quantite)
+              element.quantite += 1
+
+            }
           });
         }
         localStorage.setItem('products', JSON.stringify(products));

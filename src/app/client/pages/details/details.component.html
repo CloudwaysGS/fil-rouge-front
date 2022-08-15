@@ -1,6 +1,5 @@
-<!-- {{produits.produit.menuTailleBoisson[0].tailleBoison.boissonTailleBoissons[0].boisson.imageBlob|json}} -->
 
-<!-- {{produits.produit.menuPortionFrites[0].portionFrite.imageBlob|json}} -->
+{{produits.produit.menuPortionFrites[0].portionFrite.imageBlob|json}}
 
 <abs-header></abs-header>
 <div class="contains">
@@ -12,15 +11,15 @@
       </div>
       <div class="desc">
         <img
-          src="data:image/png;base64,{{ produits?.produit.imageBlob }}"
+          src="data:image/png;base64,{{produits?.produit.imageBlob}}"
           alt=""
         />
-        <h4>{{ produits?.produit.prix }}F</h4>
+        <h4>{{produits?.produit.prix}}F</h4>
       </div>
     </div>
     <div class="dtl2">
       <div class="boissons">
-        <h4>Complements</h4>
+        <h4>Boissons</h4>
         <div
           class="card"
           style="
@@ -36,11 +35,20 @@
           </ng-container>
         </div>
       </div>
+      <div class="frites">
+        <h4>Portions Frites Double</h4>
+
+        <div class="card" style="width: 8rem; height: 8rem; display: flex; flex-wrap: wrap; gap: 25%;">
+          <ng-container *ngFor=" let portionFrites of produits.portionFrites">
+            <abs-all-boisson [portionFrites]="portionFrites"></abs-all-boisson>
+        </ng-container>            
+        </div>
+      </div>
     </div>
-    <span
+    <!-- <span
       [id]="'erreur' + produits.tailleBoisson[1].id"
       style="margin-left: -110%; color: red"
-    ></span>
+    ></span> -->
   </div>
 
   <div class="dtl3">
@@ -130,7 +138,7 @@
                         (click)="valider(boisson.boisson.id, taille.id)"
                         name=""
                         id=""
-                      />{{ boisson.boisson.nom }} 
+                      />{{boisson.boisson.nom}} 
                       <input #quantite (click)="changeQteBoissonMenu(boisson.boisson.id ,quantite.value,produits?.produit.id)" type="number" max=" {{boisson.quantiteStock}}" value="0">
                      
                         

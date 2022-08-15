@@ -36,19 +36,21 @@ produits : any | null = null
     
   }
   addBoisson(produit:Produit){
+    
     produit.quantite=1
    if(this.type=="boissons")
        this.panierService.panier.value.boissons.push(produit)
-  if(this.type=="portions")
+  if(this.type=="portionFrites")
        this.panierService.panier.value.portions.push(produit)
    console.log(this.panierService.panier.value)
   }
 
   changeQteBoisson(boissonId:any,qte:any){
+    // alert("ok")
     let produit;
         if(this.type=="boissons")
           produit =this.panierService.panier.value.boissons.find(p=>p.id==boissonId)
-        if(this.type=="portions")
+        if(this.type=="portionFrites")
           produit =this.panierService.panier.value.portions.find(p=>p.id==boissonId)
           
           if(produit) produit.quantite=qte;

@@ -55,7 +55,10 @@ export class DetailsComponent implements OnInit {
     boisson.quantite=1
      let produit=  this.panierServ.panier.value.produits.find(p=> p.id==menuId)
       if(produit) produit.boissons?.push(boisson)
+      console.log(this.panierServ.panier.value.produits)
+      console.log(menuId)
       console.log(produit)
+
   
   }
 

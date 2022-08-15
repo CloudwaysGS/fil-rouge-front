@@ -26,6 +26,7 @@ export class PanierService {
         if (!this.isExistProduit(products, product.id)) {
           product.quantite = 1
           products.push(product);
+          
         }
         else {
           products.forEach((element: any) => {
@@ -36,6 +37,8 @@ export class PanierService {
         localStorage.setItem('products', JSON.stringify(products));
       }),
     ).subscribe();
+
+    this.itemsSubject.next(this.panier.value.produits);
   }
 
   removePanier(product: any) {
@@ -79,6 +82,7 @@ export class PanierService {
   addPanier(produit:Produit, qte:any){
       produit.boissons=[]
       this.panier.value.produits.push(produit);
+      this.itemsSubject.next(this.panier.value.produits);
   }
 
 

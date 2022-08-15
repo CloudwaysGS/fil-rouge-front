@@ -86,7 +86,7 @@
     /* border: 2px solid rgb(102, 255, 0); */
     height: 100%;
     overflow-x: scroll;
-    width: 100%;
+    width: 50%;
     background-color: #FF8E00;
     box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
     border-radius: 10px;

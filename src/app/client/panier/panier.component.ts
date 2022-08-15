@@ -15,11 +15,12 @@ export class PanierComponent implements OnInit {
   items$=this.panierServ.items$
 
   ngOnInit(): void {
+  this.items$=this.panierServ.items$
+
   }
 
   remove(a:any){
     // alert("ok")
     this.panierServ.removePanier(a)
   }
-  
 }

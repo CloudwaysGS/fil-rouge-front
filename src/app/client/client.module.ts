@@ -17,6 +17,8 @@ import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.com
 import { PanierComponent } from './panier/panier.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ListeCommandeComponent } from './liste-commande/liste-commande.component';
+import { Ng2SearchPipe, Ng2SearchPipeModule } from 'ng2-search-filter';
 // import {Ng2SearchPipeModule} from 'ng2-search-filter'
 // import { CardDetailComponent } from './pages/details/card-detail/card-detail.component';
 // import { SelectBoissonComponent } from './pages/details/select-boisson/select-boisson.component';
@@ -39,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     DetailMenuComponent,
     PanierComponent,
     LoginComponent,
+    ListeCommandeComponent,
     // CardDetailComponent,
     // SelectBoissonComponent,
     // DetailMenuComponent,
@@ -53,6 +56,7 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     HttpClientModule,
     FormsModule,
+    Ng2SearchPipeModule
   ]
 })
 export class ClientModule { }

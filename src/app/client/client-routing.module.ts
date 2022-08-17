@@ -4,6 +4,7 @@ import { DetailsComponent } from './pages/details/details.component';
 import { CatalogueComponent} from './pages/catalogue/catalogue.component';
 import { PanierComponent } from './panier/panier.component';
 import { LoginComponent } from './login/login.component';
+import { ListeCommandeComponent } from './liste-commande/liste-commande.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,9 @@ const routes: Routes = [
   { path: 'details/:id', component: DetailsComponent },
   { path: 'panier', component: PanierComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'listeCommande', component: ListeCommandeComponent }
+
+
 
 ];
 

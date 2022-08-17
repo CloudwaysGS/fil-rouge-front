@@ -15,6 +15,9 @@ import { AllBoissonComponent } from './pages/details/all-boisson/all-boisson.com
 import { NbeBoissonComponent } from './pages/details/nbe-boisson/nbe-boisson.component';
 import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.component';
 import { PanierComponent } from './panier/panier.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+// import {Ng2SearchPipeModule} from 'ng2-search-filter'
 // import { CardDetailComponent } from './pages/details/card-detail/card-detail.component';
 // import { SelectBoissonComponent } from './pages/details/select-boisson/select-boisson.component';
 // import { DetailMenuComponent } from './pages/details/detail-menu/detail-menu.component';
@@ -35,6 +38,7 @@ import { PanierComponent } from './panier/panier.component';
     NbeBoissonComponent,
     DetailMenuComponent,
     PanierComponent,
+    LoginComponent,
     // CardDetailComponent,
     // SelectBoissonComponent,
     // DetailMenuComponent,
@@ -47,7 +51,8 @@ import { PanierComponent } from './panier/panier.component';
     ClientRoutingModule,
     LayoutModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ]
 })
 export class ClientModule { }

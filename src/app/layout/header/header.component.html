@@ -32,11 +32,16 @@
           </button>
         </li>
         <li>
-          <button type="button" class="btn btn-outline-dark">Connexion</button>
+          <button routerLink="/client/login" type="button" class="btn btn-outline-dark">Connexion</button>
         </li>
         <li>
           <button type="button" class="btn btn-outline-dark">
             Créer compte
+          </button>
+        </li>
+        <li>
+          <button (click)="logout()" type="button" class="btn btn-outline-dark">
+            Deconnexion
           </button>
         </li>
       </ul>

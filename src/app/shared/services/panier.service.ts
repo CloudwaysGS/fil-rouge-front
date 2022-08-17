@@ -67,8 +67,36 @@ export class PanierService {
     });
   }
 
+  PricePanier(){
+    let tab=0
+    this.items$.pipe(
+      map((produits) => {
+        produits.forEach((element:any) =>{
+          tab+=(element.prix * element.quantite)
+        });
+        localStorage.setItem('produit', JSON.stringify(produits));
+      })
+    ).subscribe();
+    return tab
+  }
+
+  increment(product:Produit,quantite :any){
+    this.items$.pipe(
+      take(1),
+      map((products) => {
+        products.forEach((element:any) =>{
+          if(element.id === product.id){
+            element.quantite=quantite;
+          }
+        });
+        localStorage.setItem('produit', JSON.stringify(products));
+      })
+    )
+    .subscribe();
+  }
+
   // getTotal(){
-  //   if(this.cardItems){
+  //   if(this.product){
   //     this.totalAmount = 0
   //     this.cardItems.forEach((items))=>{
   //       this.totalAmount+=(item.quantite*items$.prix)
@@ -86,7 +114,9 @@ export class PanierService {
       produit.boissons=[]
       this.panier.value.produits.push(produit);
       this.itemsSubject.next(this.panier.value.produits);
-  }
+    }
+
+    
 
 
 }

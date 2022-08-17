@@ -43,8 +43,6 @@ export class DetailsComponent implements OnInit {
   }
 
   addNum(produit:Produit, qte:any){
-  
-   
     this.panierServ.addPanier(produit,qte)
     console.log(this.panierServ.panier.value)
     //f['quantite']=g
@@ -58,8 +56,6 @@ export class DetailsComponent implements OnInit {
       console.log(this.panierServ.panier.value.produits)
       console.log(menuId)
       console.log(produit)
-
-  
   }
 
   changeQteBoissonMenu(boissonId:any,qte:any,menuId:any){
